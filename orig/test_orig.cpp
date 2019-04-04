@@ -6,7 +6,9 @@
 #include <stdexcept>
 #include <vector>
 
+#ifdef HAVE_BOOST
 #include <boost/rational.hpp>
+#endif
 
 namespace U3 {
    using LABELS = std::array<uint32_t, 3>;
@@ -118,6 +120,7 @@ void GenerateU3SPS(int n, U3::SPS& ShellSPS) {
    }
 }
 
+#ifdef HAVE_BOOST
 template <typename T>
 unsigned long dim(const T & irrep) {
    const auto N = irrep.size();
@@ -129,6 +132,13 @@ unsigned long dim(const T & irrep) {
    assert(result.denominator() == 1);
    return result.numerator();
 }
+#endif
+
+// special case for U(3) irreps (does not require Boost rational numbers)
+unsigned long dim(const U3::LABELS & irrep) {
+   return (irrep[0] - irrep[1] + 1) * (irrep[0] - irrep[2] + 2) * (irrep[1] - irrep[2] + 1) / 2;
+}
+
 
 int main() {
    unsigned long n;
@@ -145,7 +155,10 @@ int main() {
    UN::LABELS UNLabels(n2, 2);
    std::fill_n(std::back_inserter(UNLabels), n1, 1);
    std::fill_n(std::back_inserter(UNLabels), n0, 0);
+
+#ifdef HAVE_BOOST
    std::cout << "U(N) irrep dim = " << dim(UNLabels) << std::endl;
+#endif
 
    uint32_t sumUNLabels = std::accumulate(UNLabels.begin(), UNLabels.end(), 0);
 
