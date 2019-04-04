@@ -1,0 +1,15 @@
+Contents of the UNtoU3 package:
+
+UNtoU3.h - main header file to be included into C++11 enabled source code.
+
+test_141.cpp - test source file for U(6) irrep [2,1,1,1,1,0].
+
+test_6114.cpp - test source file for U(21) irrep [2,2,2,2,2,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0].
+
+test_input.cpp - benchmark source file that takes eta, n2, n1, and n0 as user inputs and optionaly (with BOOST) verify level dimensionalities or generated U3 irreps.
+
+Makefile - build configuration for automake tool. 
+
+For building test programs, please run make. Configuration of the build process (compiler, flags, optional BOOST path) is specified in the Makefile file.
+
+The API of UNtoU3 class is described in: D. Langr et al., Efficient Algorithm for Representations of U(3) in U(N). Computer Physics Communication (2019), https://doi.org/0000001.0000001.
