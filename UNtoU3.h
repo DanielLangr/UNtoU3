@@ -1,13 +1,18 @@
+// UNtoU3.h - a header file that implements the algorithm for reduction of an U(N) irreducible representation (irrep) into U(3) irreps.
+// 
+// License: BSD 2-Clause (https://opensource.org/licenses/BSD-2-Clause)
+//
+// Copyright 2019 Daniel Langr
+
 #ifndef UNTOU3_H
 #define UNTOU3_H
 
-/*
- * Define before inclsion of this header file if needed.
- * #define UNTOU3_ENABLE_OPENMP     : enable parallelization of the algorithm based on OpenMP 
- * #define UNTOU3_DISABLE_TCE       : disable tail call elimination in recursive calls
- * #define UNTOU3_DISABLE_UNORDERED : disable the use of a hash table for U(3) weights (binary search tree is used instead)
- * #define UNTOU3_DISABLE_PRECALC   : disable precalculation of low Gelfand pattern rows to U(3) weights
-*/
+// Optionally, define before inclsion of this header file:
+//
+// #define UNTOU3_ENABLE_OPENMP     : enable parallelization of the algorithm based on OpenMP 
+// #define UNTOU3_DISABLE_TCE       : disable tail call elimination in recursive calls
+// #define UNTOU3_DISABLE_UNORDERED : disable the use of a hash table for U(3) weights (binary search tree is used instead)
+// #define UNTOU3_DISABLE_PRECALC   : disable precalculation of low Gelfand pattern rows to U(3) weights
 
 #include <array>
 #include <cassert>
