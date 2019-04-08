@@ -1,3 +1,27 @@
+// test_input.cpp - a test driver for UNtoU3 class.
+// 
+// License: BSD 2-Clause (https://opensource.org/licenses/BSD-2-Clause)
+//
+// Copyright (c) 2019, Daniel Langr
+// All rights reserved.
+//
+// Program implements the U(N) to U(3) the input irrep [f] specified by the HO level n, N=(n+1)*(n+2)/2, 
+// and its number of twos, ones, and zeros read from the standard input.
+// For instance, for the input U(21) irrep [f] = [2,2,2,2,2,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+// the user should provide the following numbers: 5 6 1 14.
+//
+// The program performs the U(N) to U(3) reduction and calculates the sum of the dimensions
+// of resulting U(3) irrpes multiplied by their level dimensionalities, and print it to the
+// standard output. For instance, for the input irrep specified above, the output should read:
+// U(3) irreps total dim = 2168999910
+//
+// This sum should be equal to dim[f], which can be calculated analytically with the support 
+// of rational numbers. The program performs this calculcation as well if the Boost library 
+// is available and uses its Boost.Rational sublibrary. Availabitliy of Boost is indicated by
+// users by definition of HAVE_BOOST preprocessor symbol. 
+// For the input irrep [f] specified above, the program should first print out:
+// U(N) irrep dim = 2168999910
+
 #include <algorithm>
 #include <cassert>
 #include <iostream>
