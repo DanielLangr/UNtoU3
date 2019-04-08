@@ -2,7 +2,8 @@
 // 
 // License: BSD 2-Clause (https://opensource.org/licenses/BSD-2-Clause)
 //
-// Copyright 2019 Daniel Langr
+// Copyright (c) 2019, Daniel Langr
+// All rights reserved.
 
 #ifndef UNTOU3_H
 #define UNTOU3_H
