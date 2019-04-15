@@ -11,5 +11,3 @@ test_input.cpp - benchmark source file that takes eta, n2, n1, and n0 as user in
 Makefile - build configuration for automake tool. 
 
 For building test programs, please run make. Configuration of the build process (compiler, flags, optional BOOST path) is specified in the Makefile file.
-
-The API of UNtoU3 class is described in: D. Langr et al., Efficient Algorithm for Representations of U(3) in U(N). Computer Physics Communication (2019), https://doi.org/0000001.0000001.
