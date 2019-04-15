@@ -100,7 +100,7 @@ class UNtoU3 {
       U3MultMap mult_;
 
 #ifndef UNTOU3_DISABLE_PRECALC
-      // arrays used to store precalculated contributions of low-level Gelfand patters into resulting U(3) weights
+      // arrays used to store precalculated contributions of low-level Gelfand patterns into resulting U(3) weights
       std::array<std::array<std::array<uint8_t, 4>, 4>, 4> cnt_;
       std::array<std::array<std::array<uint16_t*, 4>, 4>, 4> ptr_;
       std::array<uint16_t, 3 * 45> conts_;
