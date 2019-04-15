@@ -9,12 +9,12 @@ else
 BOOST_FLAGS =
 endif
 
-binaries = test_orig
+binaries = test_alg1
 
 .PHONY: all
 all: $(binaries)
 		
-test_orig: %: %.cpp
+test_alg1: %: %.cpp
 	$(CC) $(CXXRELEASE_FLAGS) $(BOOST_FLAGS) -o $@ $<
 
 .PHONY: clean
