@@ -10,4 +10,6 @@ test_input.cpp - benchmark source file that takes eta, n2, n1, and n0 as user in
 
 Makefile - build configuration for automake tool. 
 
+alg1/test_alg1.cpp - original implementation extracted from LSU3shell.
+
 For building test programs, please run make. Configuration of the build process (compiler, flags, optional BOOST path) is specified in the Makefile file.
